@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-latex-bin
 Version:	20140619
-Release:	1
+Release:	2
 Summary:	LaTeX executables and man pages
 Group:		Publishing
 URL:		http://tug.org/texlive
