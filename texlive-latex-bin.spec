@@ -1,18 +1,12 @@
-# revision 33736
-# category TLCore
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-latex-bin
-Version:	20171112
-Release:	2
+Version:	62387
+Release:	1
 Summary:	LaTeX executables and man pages
 Group:		Publishing
 URL:		http://tug.org/texlive
 License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latex-bin.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latex-bin.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latex-bin.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latex-bin.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,24 +18,22 @@ Requires:	texlive-latex-bin.bin
 TeXLive latex-bin package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
 %_texmf_fmtutil_d/latex-bin
-%doc %{_mandir}/man1/latex.1*
-%doc %{_texmfdistdir}/doc/man/man1/latex.man1.pdf
-%doc %{_mandir}/man1/pdflatex.1*
-%doc %{_texmfdistdir}/doc/man/man1/pdflatex.man1.pdf
+%doc %{_mandir}/man1/*
+%doc %{_texmfdistdir}/doc/man/man1/*
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
