@@ -1,6 +1,6 @@
 Name:		texlive-latex-bin
 Version:	62387
-Release:	1
+Release:	2
 Summary:	LaTeX executables and man pages
 Group:		Publishing
 URL:		http://tug.org/texlive
