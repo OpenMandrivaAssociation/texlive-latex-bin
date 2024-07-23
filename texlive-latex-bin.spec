@@ -1,5 +1,5 @@
 Name:		texlive-latex-bin
-Version:	66186
+Version:	71362
 Release:	1
 Summary:	LaTeX executables and man pages
 Group:		Publishing
